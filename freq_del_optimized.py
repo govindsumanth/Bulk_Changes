@@ -5,11 +5,8 @@ import enmscripting
 from getpass import getpass
 import sys
 
-"""user_name = input('ENM User Name: ')
-user_password = getpass('ENM User Password: ')"""
-
-user_name='n30864oc'
-user_password='Keyboard123!'
+user_name = input('ENM User Name: ')
+user_password = getpass('ENM User Password: ')
 
 try:
     session = enmscripting.open('https://syl9launcher.syl9enm1.mgmt/').with_credentials(enmscripting.UsernameAndPassword(str(user_name),str(user_password)))
@@ -22,9 +19,9 @@ if int(channel)<10000:
 else:
     channel_type='TDD'
 
-"""coll_or_node = input("Enter Collection name or Node name: ")"""
+coll_or_node = input("Enter Collection name or Node name: ")
 
-coll_or_node='TPA'
+#coll_or_node='TPA'
 
 def freq_del(inputt):
     response = session.terminal().execute(inputt)
